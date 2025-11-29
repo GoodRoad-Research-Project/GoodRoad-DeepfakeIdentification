@@ -1,0 +1,9 @@
+flask
+flask-cors
+flask-sqlalchemy
+opencv-python-headless
+numpy
+tensorflow
+keras
+werkzeug
+scipy
