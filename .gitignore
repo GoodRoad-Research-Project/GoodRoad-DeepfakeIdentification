@@ -1,0 +1,47 @@
+# ========================
+# GLOBAL (Apply to all)
+# ========================
+.DS_Store
+.env
+
+# ========================
+# BACKEND (Python/Flask)
+# ========================
+# 1. Virtual Environment (Crucial)
+venv/
+env/
+
+# 2. Python Bytecode
+__pycache__/
+*.py[cod]
+
+# 3. Database (Never push local data)
+*.db
+*.sqlite3
+instance/
+
+# 4. Large Media & Datasets (Too big for Git)
+dataset/
+raw_videos/
+uploads/
+
+# 5. ML Model Weights (Large binary files)
+# Only comment these out if you specifically WANT to version control your models
+*.h5
+*.weights
+models/
+
+# ========================
+# FRONTEND (Node/React/Vue)
+# ========================
+node_modules/
+build/
+dist/
+.pnp
+.pnp.js
+coverage/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

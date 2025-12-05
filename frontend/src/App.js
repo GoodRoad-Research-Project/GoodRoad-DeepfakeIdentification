@@ -443,16 +443,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-200">
-      
-      {/* INLINE CSS TO REMOVE DEFAULT BROWSER ICONS */}
-      <style>{`
-        /* Hides the default calendar/clock icons in Chrome/Edge/Safari */
-        input[type="date"]::-webkit-calendar-picker-indicator,
-        input[type="time"]::-webkit-calendar-picker-indicator {
-            display: none !important;
-            -webkit-appearance: none;
-        }
-      `}</style>
 
       {/* --- HEADER --- */}
       <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-blue-100 dark:border-gray-700 sticky top-0 z-10 transition-colors duration-200">
@@ -648,7 +638,7 @@ function App() {
                         <label className="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-1">
                           Date
                         </label>
-                        {/* RESTORED RELATIVE DIV, ICON, AND PADDING */}
+                        
                         <div className="relative">
                             <CalendarDays size={16} className="absolute left-3 top-3 text-gray-400" />
                             <input
@@ -665,7 +655,7 @@ function App() {
                         <label className="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-1">
                           Time
                         </label>
-                        {/* RESTORED RELATIVE DIV, ICON, AND PADDING */}
+                        
                         <div className="relative">
                             <Clock size={16} className="absolute left-3 top-3 text-gray-400" />
                             <input
@@ -687,9 +677,6 @@ function App() {
                       <textarea
                         rows={3}
                         placeholder="Eg: Driver sped through the intersection..."
-                        /* 'break-all' prevents long strings from expanding width.
-                          'overflow-y-auto' combined with scrollbar hiding classes keeps it clean.
-                        */
                         className="w-full border border-gray-300 dark:border-gray-600 rounded-xl p-2.5 focus:ring-2 focus:ring-blue-200 outline-none text-sm resize-none bg-white dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 break-all overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
                         value={formData.description}
                         onChange={(e) => handleMetadataChange("description", e.target.value)}
@@ -744,8 +731,6 @@ function App() {
                   <Activity size={16} />
                   Deep Fake Detection
                 </div>
-                
-                {/* REMOVED: "Live Python/Django backend..." text */}
                 
                 <ul className="space-y-4 text-sm mt-4">
                   {/* STEP 1 */}
