@@ -792,7 +792,6 @@ function App() {
         {/* ... (Dashboard, Modal, etc.) ... */}
         {view === "dashboard" && (
           <div className="space-y-6">
-            
             <div className="flex flex-wrap items-center gap-4">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">Submission Dashboard</h2>
               <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -953,11 +952,7 @@ function App() {
 
                         <div className="flex-1 space-y-2">
                           <div className="flex flex-wrap items-center gap-2 justify-between">
-                            <div className="flex items-center gap-3 flex-wrap">
-                              {/* <h3 className="font-semibold text-gray-900 dark:text-white text-sm uppercase tracking-wide">
-                                {violationOptions.find((v) => v.value === submission.violationType)?.label ??
-                                  submission.violationType}
-                              </h3> */}
+                            <div className="flex items-center gap-3 flex-wrap"> 
                               <span
                                 className={`text-[0.8rem] font-semibold px-2 py-0.5 rounded-full border ${config.chipClass}`}
                               >
@@ -993,7 +988,6 @@ function App() {
                                     Confidence: {Number(submission.confidenceScore).toFixed(2)}%
                                 </p>
                                 <span className="text-gray-400">|</span>
-                                {/* REMOVED SMS SENT TEXT */}
                                 <span className="text-gray-500 dark:text-gray-400">
                                     Analysis Complete
                                 </span>
