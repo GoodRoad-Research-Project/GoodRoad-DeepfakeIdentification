@@ -1024,10 +1024,6 @@ function App() {
 {/* View Modal */}
 {viewModalOpen && selectedSubmission && (
   <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-in fade-in duration-300">
-    {/* MODAL CONTAINER:
-        LIGHT MODE: bg-white, border-gray-200
-        DARK MODE: dark:bg-[#0f172a], dark:border-gray-800 
-    */}
     <div className="bg-white dark:bg-[#0f172a] border border-gray-200 dark:border-gray-800 rounded-[2rem] shadow-2xl max-w-5xl w-full max-h-[90vh] overflow-hidden flex flex-col transition-colors duration-300">
       
       {/* Modal Header */}
@@ -1107,16 +1103,6 @@ function App() {
 
             {/* Metadata Info */}
             <div className="space-y-3">
-              {/* <div className="bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 rounded-2xl p-4 flex items-center justify-between group hover:border-blue-200 transition-all">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 bg-blue-100 dark:bg-blue-500/10 rounded-lg text-blue-600 dark:text-blue-400"><ShieldAlert size={16}/></div>
-                  <span className="text-[15px] font-bold text-gray-500 dark:text-gray-400">Violation</span>
-                </div>
-                <span className="text-[15px] font-bold text-gray-900 dark:text-white text-right break-words max-w-[150px]">
-                  {violationOptions.find((v) => v.value === selectedSubmission.violationType)?.label ?? selectedSubmission.violationType}
-                </span>
-              </div> */}
-
               <div className="bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 rounded-2xl p-4 flex items-center justify-between group hover:border-red-200 transition-all">
                 <div className="flex items-center gap-3">
                   <div className="p-3 bg-red-100 dark:bg-red-500/10 rounded-lg text-red-600 dark:text-red-400"><MapPin size={16}/></div>
